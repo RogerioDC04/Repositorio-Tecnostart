@@ -28,3 +28,10 @@ body{
  #Menu ul li a:hover{
     color: black;
 }
+#container{
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

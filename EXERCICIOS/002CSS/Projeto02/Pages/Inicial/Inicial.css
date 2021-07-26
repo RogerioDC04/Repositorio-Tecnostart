@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url();
+    background-image: url(../Inicial/Background.jpg);
     background-attachment: fixed;
 }
 
@@ -49,14 +49,15 @@ nav ul {
   
 h2 {   
     font-size: 25px;
-    margin: 40px;}
-
+    margin: 40px;
+    color:white
 }
  body{
    margin: 0;
  }
 footer{
     background-color: darkgreen;
+    color: white;
 }
 #Menu ul{
     margin: 0;
@@ -77,6 +78,10 @@ footer{
 #Menu ul li a:hover{
     color: black;
 }
-    
-
+main{
+    color:white
+    }
+#Gol{
+  color: black;
+}
 
