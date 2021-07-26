@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+}
+nav{
+    background-color: darkgreen;
+}
+body{
+    margin: 0;
+}
+footer{
+    background-color: darkgreen;
+}
+#Menu ul{
+    list-style: none;
+    padding-left: 1200px;
+    padding-top: 0;
+    background-color: darkgreen;
+    margin: 0;
+    
+}
+#Menu ul li{
+    display: inline;
+}
+#Menu ul li a{
+    padding: 10px 10px;
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+}
+#Menu ul li a:hover{
+    color: black;
+}
