@@ -72,8 +72,8 @@ footer{
 #Menu ul li a{
     padding: 10px 10px ;
     display: inline-block;
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 #Menu ul li a:hover{
     color: black;
