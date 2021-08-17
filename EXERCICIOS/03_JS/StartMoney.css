@@ -1,0 +1,28 @@
+* {
+   background-color: #E5E5E5;
+   margin: 0;
+   padding: 0;
+}
+header {
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+}
+div {
+    width: 290px;
+    height: 422px;
+    Top: 220px;
+    left: 170px;
+    border: 1px solid #ccc;
+    background-color:#BBE75E;
+    line-height: 145px;
+    text-align: center;
+    vertical-align: top;
+}
+.Container {
+    margin-left: 20px;
+    justify-content:space-between;
+    display: flex;
+    
+}
