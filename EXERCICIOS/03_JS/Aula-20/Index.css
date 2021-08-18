@@ -1,7 +1,18 @@
-.Container {
-  justify-content: center;
-  width: 800px;
-  height: 800px;
- background-color: blue;
+* {
+  margin: 0;
+  padding: 0;
 }
-   
+
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 140px;
+}
+button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
