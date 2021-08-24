@@ -1,42 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="Index.css">
 </head>
+
 <body>
     <main>
         <div class="Card">
-            <form class="Container">
-                <div class="Card01">
-                    <label for="Valor Inicial">Valor Inicial</label>
-                    <input id="valorinicial" required type="number">
+            <div class="Container">
+            <form>
+                <div class="divisaoDeConteudo">
+                    <div class="form-control">
+                        <label for="Valor Inicial">Valor Inicial</label>
+                        <input id="valorinicial" required type="number">
+                    </div>
+                    <div class="form-control">
+                        <label for="Aporte Mensal">Aporte Mensal</label>
+                        <input id="aportemensal" name="aporte" required type="number">
+                    </div>
+                    <div class="form-control">
+                        <label for="Meses">Meses</label>
+                        <input id="meses" name="meses" required type="number">
+                    </div>
                 </div>
-                <div class="Card02">
-                    <label for="Aporte Mensal">Aporte Mensal</label>
-                    <input id="aportemensal" required type="number">
-                </div>
-                <div class="Card03">
-                    <label for="Meses">Meses</label>
-                    <input id="meses" required type="number">
-                </div>
-                <div class="Card04">
-                  <input type="checkbox"> Nubank <input type="text">
-                </div>
+                <div class="divisaoDeConteudo form-select">
+                    <div class="form-check">
+                        <div>
+                            <input id="Picpay" name="taxa" type="radio" value="1.20" checked>
+                            <label for="Picpay">Pic Pay</label>
+                        </div>
+                        <input id="TaxaPicPay" placeholder="120% CDI" type="text">
+                    </div>
 
-                <div>
-                    <button class="Botao">Cadastrar</button>
+                    <div class="form-check">
+                        <div>
+                            <input id="Nubank" name="taxa" type="radio" value="1">
+                            <label class="form-check-label" for="Nubank">Nubank</label>
+                        </div>
+                        <input id="TaxaNubank" placeholder="100% CDI" type="text">
+                    </div>
+
+                    <div class="form-check">
+                        <div>
+                            <input class="form-check-input" id="Poupanca" name="taxa" type="radio" value="0.0024">
+                            <label class="form-check-label" for="Poupanca">Poupança</label>
+                        </div>
+                        <input id="TaxaPoupanca" placeholder="2,4%" readonly type="text">
+                    </div>
+
+                    <div class="form-check">
+                        <div>
+                            <input id="Outro" name="taxa" type="radio" value="0">
+                            <label for="Outro">Outro</label>
+                        </div>
+                        <input id="TaxaOutro" type="text">
+                    </div>
                 </div>
-
-                <div class="Rende">Rende
-                </div>
-
-
+            </form>
+            <div>
+                <button onclick="calcula()" type="button">Calcular</button>
+            </div>
+        </div>
+  </div>
+        <div class="card">
+            <div class="container">
+                <span id="Resultado" hidden> Rende: <span></span></span>
+            </div>
+        </div>
         </div>
     </main>
-    
+
 </body>
 
-   <script src="Index.js"></script>
+<script src="Index.js"></script>
+
 </html>
