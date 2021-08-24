@@ -102,13 +102,14 @@ const ListaDePessoas = [
 //    console.log(ListaFeminino)
 
 // EXERCICIO01
+
 // ListaPessoas = ListaDePessoas.map((pessoa)=>{
 // return {  "nome" : pessoa.nome,
 //          "telefone_fixo" : pessoa.telefone_fixo,
 //          "celular" : pessoa.celular
-     
 //         }
 // })
+// console.log(ListaPessoas)
 
 // EXERCICIO03
 // let ListaMasculina = [];
@@ -118,6 +119,15 @@ const ListaDePessoas = [
 //            ListaMasculina.push(pessoa)
 //        }
 //    }
-//    console.log(ListaMasculina)
+// console.log(ListaMasculina)
+
+// EXERCICIO04
+
+// listaNome = ListaDePessoas.map((pessoa)=>{
+//     return {
+//         "nome" : pessoa.nome,
+//     }
+// })
+// console.log(listaNome)
 
     
