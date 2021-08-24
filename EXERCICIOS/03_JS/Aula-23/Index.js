@@ -90,19 +90,18 @@ const ListaDePessoas = [
             celular: "(47) 99849-2199"
         }
 ]
+// EXERCICIO02
 
-let ListaPessoas = [];
-// for (let i = 0; i < ListaDePessoas.length; i++){
-//     let pessoa = ListaDePessoas[i];
-//     let ListaPessoas = {
-//         "nome" : pessoa.nome,
-//         "telefone_fixo" : pessoa.telefone_fixo,
-//         "celular" : pessoa.celular
+// let ListaFeminino = [];
+//  for (let i = 0; i < ListaDePessoas.length; i++){
+//    let pessoa = ListaDePessoas[i];
+//     if(pessoa.sexo === "Feminino"){
+//     ListaFeminino.push(pessoa)
 //     }
-//     ListaPessoas.push(ListaPessoas)
 // }
-// console.log(ListaPessoas)
+//    console.log(ListaFeminino)
 
+// EXERCICIO01
 // ListaPessoas = ListaDePessoas.map((pessoa)=>{
 // return {  "nome" : pessoa.nome,
 //          "telefone_fixo" : pessoa.telefone_fixo,
@@ -111,11 +110,14 @@ let ListaPessoas = [];
 //         }
 // })
 
-ListaPessoas = ListaDePessoas.map((pessoa)=>{
-    return {
-        "nome" : pessoa.nome,
-        "sexo" : pessoa.sexo
-    }
-})
-console.log(ListaPessoas)
+// EXERCICIO03
+// let ListaMasculina = [];
+//    for(let i = 0; i < ListaDePessoas.length; i++){
+//        let pessoa = ListaDePessoas[i];
+//        if(pessoa.sexo === "Masculino"){
+//            ListaMasculina.push(pessoa)
+//        }
+//    }
+//    console.log(ListaMasculina)
 
+    
