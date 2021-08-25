@@ -112,6 +112,7 @@ const ListaDePessoas = [
 // console.log(ListaPessoas)
 
 // EXERCICIO03
+
 // let ListaMasculina = [];
 //    for(let i = 0; i < ListaDePessoas.length; i++){
 //        let pessoa = ListaDePessoas[i];
@@ -130,4 +131,32 @@ const ListaDePessoas = [
 // })
 // console.log(listaNome)
 
-    
+// EXERCICIO05
+
+// primeiraPessoaDoRs = ListaDePessoas.find(pessoa => pessoa.estado === "RS");
+// console.log(primeiraPessoaDoRs)
+
+// EXERCICIO06
+
+// ListaDePessoas.pop();
+// console.log(ListaDePessoas)
+
+// EXERCICIO07
+
+// ListaDePessoas.push({
+//     pessoa: {
+//         nome: "Alana Vera Assis",
+//         idade: 68,
+//         data_nasc: "01-05-1953",
+//         sexo: "Feminino",
+//         estado: "PB",
+//         telefone_fixo: "(83) 2837-2032",
+//         celular: "(83) 99413-4852"
+//     }
+// })
+// console.log(ListaDePessoas)
+
+// EXERCICIO08
+
+// listaDeEstado = ListaDePessoas.filter(pessoa => pessoa.estado === "RS");
+// console.log(listaDeEstado)
