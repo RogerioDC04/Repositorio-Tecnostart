@@ -13,6 +13,29 @@ Linhas.forEach((linha, indiceL) => {
 
         campo.addEventListener("contextmenu", () => {
             alert("Cliquei com o botao direito")     
+               
+            if (!campo.className.includes("aberto")) {
+                if (campo.className.includes("marcado")) {
+                    campo.className = "campo"
+                    campo.innerText = ""
+                } else {
+                    campo.className = "campo marcado"
+                    campo.innerText = "M"
+                }
+            }
         })
     })
-})
+}) 
+let numeroPronto = getRandom()
+console.log(numeroPronto)
+
+function atribuirBombasAosCampos(indiceL, indiceC){
+    Math.random();
+
+    if (Math.random() > 0.5) {
+        campo.innerText = ""
+    } else {
+        campo.innerText = "B"
+    }
+          
+}

@@ -13,3 +13,24 @@ body {
     justify-content: center;
     align-items: center;
 }
+.marcado {
+    background-color: burlywood;
+    border-style: inset
+    /* campo marcado */
+}
+
+.alerta {
+    /* campo que ao redor tem bomba */
+}
+
+.aberto {
+    /* campo aberto */
+}
+
+.explodidio{
+    /* campo no qual explodiu a bomba */
+}
+
+.bomba {
+    /* campo aberto com bomba */
+}
