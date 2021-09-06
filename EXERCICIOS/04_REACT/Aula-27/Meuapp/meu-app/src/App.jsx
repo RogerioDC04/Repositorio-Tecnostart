@@ -1,11 +1,11 @@
-import Card from './card/Card'
+// import Card from './card/Card'
 
 function App() {
     return (
-    <> 
-    <Card></Card>
-    </>
+    <div> 
+       <card></card>
+       <card className = "Card02"></card>
+    </div>
     );
 }
 
-export default App;
