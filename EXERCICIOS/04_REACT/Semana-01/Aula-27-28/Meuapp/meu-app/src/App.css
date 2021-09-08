@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Flexo-Demi",arial,sans-serif;
+}
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  margin: 0;
+  display: inline-block;
+  max-width: 1366px;
+  width: 70%;
+}
+
+.pokedex {
+  max-width: 900px;
+  margin-top: 3em;
+}
+
+.pokedex ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}

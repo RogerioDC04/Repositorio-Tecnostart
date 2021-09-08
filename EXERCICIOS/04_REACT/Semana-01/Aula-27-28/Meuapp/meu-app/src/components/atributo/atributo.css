@@ -1,0 +1,44 @@
+.atributo {
+    text-align: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 2em;
+    font-size: .8em;
+    line-height: 2em;
+    font-weight: 100;
+}
+
+.normal {
+    background-color: #a4acaf;
+    color: black;
+}
+
+.fogo {
+    background-color: #fd7d24;
+    color: white;
+}
+
+.agua {
+    background-color: #4592c4;
+    color: white;
+}
+
+.planta {
+    background-color: #9bcc50;
+    color: black;
+}
+
+.veneno {
+    background-color: #b97fc9;
+    color: white;
+}
+
+.ar {
+    background: linear-gradient(#3dc7ef 50%, #bdb9b8 50% );
+    color: black;
+}
+
+.inseto {
+    background-color: #729f3f;
+    color: white;
+}
