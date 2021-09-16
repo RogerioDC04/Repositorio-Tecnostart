@@ -7,6 +7,10 @@ export default function App() {
    <Routes/>
   );
 }
+useEffect(()=>{
+  setTotalTarefas (tarefas.length)
+  contadorDeTarefasFinalizadas()
+}, [tarefas])
 
 // export function AppVisualizar() {
 //   return (

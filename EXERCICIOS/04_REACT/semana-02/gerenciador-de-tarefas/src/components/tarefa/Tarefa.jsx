@@ -1,9 +1,20 @@
+import { useState } from "react"
 import "./tarefa.css"
-export default function Tarefa({tarefa, deletar}) {
+export default function Tarefa({ tarefa, deletar, visualizar, editar, alterarStatus }) {
 
-    return(
-        <div className="tarefa">
-            <h1>{tarefa.titulo}</h1>
+    const [classe, setClasse] = useState("tarefa")
+
+    function handleOnClick() {
+        if (tarefa.concluida) {
+        setClasse("tarefa")
+        }else{
+            setClasse("tarefa concluida")
+        }
+        alterarStatus(tarefa.id)
+    }
+    return (
+        <div className={classe}>
+            <h1 onClick={handleOnClick}>{tarefa.titulo}</h1>
             <div className="botoes">
                 <button className="ediatr">E</button>
                 <button className="deletar" onClick={() => deletar(tarefa.id)}>X</button>

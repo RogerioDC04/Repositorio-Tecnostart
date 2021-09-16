@@ -5,12 +5,18 @@ export default function ExternalCard(props) {
         <div className="externalCard">
 
             <div className="externalCardContent">
-                <h1>
-                    {props.title}
-                </h1>
-                {props.children}
-            </div>
+                <div className="tituloContador">
+                    <h1>
+                        {props.title}
+                    </h1>
 
-        </div>
-    )
+                    <div>
+                        {props.finilizadas?props.finalizado:0}/{props.total?props.total:0}
+                    </div>
+                    </div>
+                    {props.children}
+                </div>
+
+            </div>
+            )
 }

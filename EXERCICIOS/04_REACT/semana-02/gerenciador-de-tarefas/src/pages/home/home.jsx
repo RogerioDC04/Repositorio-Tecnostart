@@ -1,9 +1,19 @@
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import { ExternalCard, IncluirTarefa, Tarefa } from "../../coponents/components";
 
 export default function PageHome({ tarefas, setTarefas, id, setId }) {
     const history = useHistory()
+    
+    const [totalDeTarefas, setTotalTarefas] = useState(tarefas.length)
+    const [tarefasFinalizadas, setTarefasFinalizadas] = useState(0)
+
+
+    function contadorDeTarefasFinalizadas(){
+        const quantidadeDeTarefasConcluidas = tarefas.filter ( tarefa => tarefa.concluida).length
+        setTarefasFinalizadas(quantidadeDeTarefasConcluidas)
+    }
 
     function incrementarId() {
         setId(id + 1)
@@ -35,6 +45,17 @@ export default function PageHome({ tarefas, setTarefas, id, setId }) {
         history.push(`/${idTarefa}/editar`)
     }
 
+    function finalizarTarefa(idTarefa){
+        const novasTarefas = tarefas.map(tarefa => {
+           if (tarefa.id === idTarefa) {
+               tarefa.concluida = !tarefa.cocluida
+           } 
+           return tarefa
+        });
+
+        setTarefas(novasTarefas);
+    }
+
     const tarefaFromList = () => {
         return tarefas.map(tarefa => {
             return (
@@ -42,7 +63,8 @@ export default function PageHome({ tarefas, setTarefas, id, setId }) {
                     <Tarefa tarefa={tarefa}
                         visualizar={visualizarTarefa}
                         editar={editarTarefa}
-                        deletar={deletarTarefa} />
+                        deletar={deletarTarefa}
+                        alterarStatus={finalizarTarefa}/>
                 </li>
             )
         })
@@ -51,7 +73,7 @@ export default function PageHome({ tarefas, setTarefas, id, setId }) {
     return (
         <main>
             <div className="container">
-                <ExternalCard title="Minhas Tarefas">
+                <ExternalCard title="Minhas Tarefas" total={totalDeTarefas} tarefasFinalizadas={tarefasFinalizadas}>
                     <IncluirTarefa adicionarTarefa={adicionarTarefa} />
                     <ul>
                         {tarefaFromList()}
