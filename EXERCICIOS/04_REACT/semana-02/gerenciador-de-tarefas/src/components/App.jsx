@@ -1,56 +1,49 @@
 import './app.css';
 
-import Routes from '../router/Routes';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import { MenuNav } from './components';
+import { PageEditar, PageHome, PageVisualizar, PageNaoEncontrada } from '../pages/pages'
+import { HOME, VISUALIZAR, EDITAR, NOT_FOUND } from '../router/Routes'
 
 export default function App() {
+  const [tarefas, setTarefas] = useState([])
+  const [id, setId] = useState(0)
+  const [tarefasFinalizadas, setTarefasFinalizadas] = useState(0)
+
+  
+  function contadorDeTarefasFinalizadas() {
+    return tarefas.filter(tarefa => tarefa.concluida === true).length
+  }
+
+  useEffect(() => {
+    setTarefasFinalizadas(contadorDeTarefasFinalizadas())
+  }, [tarefas])
+
   return (
-   <Routes/>
+    <Router>
+      <MenuNav />
+      <Switch>
+        <Route path={HOME} exact>
+          <PageHome
+            tarefas={tarefas}
+            setTarefas={setTarefas}
+            id={id} 
+            setId={setId}
+            tarefasFinalizadas={tarefasFinalizadas}
+            totalDeTarefas={tarefas.length} />
+        </Route>
+        <Route path={VISUALIZAR} exact>
+          <PageVisualizar tarefas={tarefas} />
+        </Route>
+        <Route path={EDITAR} exact>
+          <PageEditar tarefas={tarefas} setTarefas={setTarefas} />
+        </Route>
+        <Route path={NOT_FOUND}>
+          <PageNaoEncontrada />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-useEffect(()=>{
-  setTotalTarefas (tarefas.length)
-  contadorDeTarefasFinalizadas()
-}, [tarefas])
-
-// export function AppVisualizar() {
-//   return (
-//     <main>
-//       <div className="container">
-
-//         <ExternalCard title="Lista De Tarefas - vizualizar">
-//           <div className="row space-evenly">
-//             <Botao>Voltar</Botao>
-//             <span className="flex2"></span>
-//           </div>
-
-//           <TarefaEditar title="Minha primeira tarefa" readOnly="true">
-//             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, saepe quidem animi illo, accusamus consequuntur, voluptatum ipsa voluptatem quo repudiandae nihil veritatis? Ipsa fuga dolorem est labore itaque dolores corporis.
-//           </TarefaEditar>
-//         </ExternalCard>
-
-//       </div>
-//     </main>
-//   );
-// }
-
-// export function AppEditar() {
-//   return (
-//     <main>
-//       <div className="container">
-
-//         <ExternalCard title="Lista De Tarefas - editar">
-//           <div className="row space-evenly">
-//             <Botao>Voltar</Botao>
-//             <span className="flex1"></span>
-//             <Botao>Salvar</Botao>
-//           </div>
-
-//           <TarefaEditar title="Minha primeira tarefa" readOnly="false">
-//             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, saepe quidem animi illo, accusamus consequuntur, voluptatum ipsa voluptatem quo repudiandae nihil veritatis? Ipsa fuga dolorem est labore itaque dolores corporis.
-//           </TarefaEditar>
-//         </ExternalCard>
-
-//       </div>
-//     </main>
-//   );
-// }

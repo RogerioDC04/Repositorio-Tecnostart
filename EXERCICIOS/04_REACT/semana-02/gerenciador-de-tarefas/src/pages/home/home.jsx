@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
-import { ExternalCard, IncluirTarefa, Tarefa } from "../../coponents/components";
+import { ExternalCard, IncluirTarefa, Tarefa } from "../../components";
 
 export default function PageHome({ tarefas, setTarefas, id, setId }) {
     const history = useHistory()

@@ -1,6 +1,6 @@
 import { useHistory, useParams, useLocation } from "react-router-dom";
 
-import { ExternalCard, Botao, TarefaEditar } from "../../coponents/components";
+import { ExternalCard, Botao, TarefaEditar } from "../../components";
 import { NOT_FOUND } from "../../routes/rotas";
 
 export default function PageVisualizar({ tarefas }) {

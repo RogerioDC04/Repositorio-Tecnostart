@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import MenuNav from '../components/menu-vaigation/MenuNav';
-import PageHome from '../pages/home'
+import PageHome from '../pages/home/home'
 
 
 export default function Routes() {
