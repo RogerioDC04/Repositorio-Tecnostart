@@ -1,10 +1,8 @@
-import { useHistory, useParams, useLocation } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
-import { ExternalCard, Botao, TarefaEditar } from "../../components";
-import { NOT_FOUND } from "../../routes/rotas";
+import { ExternalCard, Botao, TarefaEditar } from "../../coponents/components";
 
 export default function PageVisualizar({ tarefas }) {
-  const location = useLocation()
   const {id} = useParams()
   const history = useHistory()
   let tarefaAtual
@@ -13,10 +11,9 @@ export default function PageVisualizar({ tarefas }) {
     history.goBack()
   }
 
-
-
   function tarefaExiste() {
-    tarefaAtual = tarefas.find(tarefa => tarefa.id.toString() ===  id )
+    debugger
+    tarefaAtual = tarefas.find(tarefa => tarefa.id.toString() === id)
   }
 
   return (

@@ -1,7 +1,7 @@
 import { useHistory, useParams } from "react-router-dom";
 import { useState } from "react";
 
-import {ExternalCard, Botao, TarefaEditar} from "../../components";
+import {ExternalCard, Botao, TarefaEditar} from "../../coponents/components";
 
 export default function PageEditar({ tarefas, setTarefas }) {
     const [conteudo, setConteudo] = useState()
