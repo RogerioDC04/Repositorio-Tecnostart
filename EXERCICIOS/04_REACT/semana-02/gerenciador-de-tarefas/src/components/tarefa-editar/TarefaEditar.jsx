@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./tarefaEditar.css"
+import "./tarefaeditar.css"
 
 export default function TarefaEditar({ tarefa, onChange, readOnly }) {
     const [valor, setValor] = useState(tarefa.conteudo)

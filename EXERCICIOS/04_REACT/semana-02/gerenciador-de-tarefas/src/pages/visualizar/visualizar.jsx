@@ -1,6 +1,6 @@
 import { useHistory, useParams } from "react-router-dom";
 
-import { ExternalCard, Botao, TarefaEditar } from "../../coponents/components";
+import { ExternalCard, Botao, TarefaEditar } from "../../components/components";
 
 export default function PageVisualizar({ tarefas }) {
   const {id} = useParams()

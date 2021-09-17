@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { MenuNav } from './components';
 import { PageEditar, PageHome, PageVisualizar, PageNaoEncontrada, PageLogin } from '../pages/pages'
-import { HOME, VISUALIZAR, EDITAR, NOT_FOUND, LOGIN } from '../routes/rotas'
+import { HOME, VISUALIZAR, EDITAR, NOT_FOUND, LOGIN } from '../router/rotas'
 
 export default function App() {
   const [tarefas, setTarefas] = useState(valorInicialTarefas)

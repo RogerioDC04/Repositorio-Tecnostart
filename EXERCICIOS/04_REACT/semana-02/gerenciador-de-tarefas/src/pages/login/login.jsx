@@ -1,4 +1,4 @@
-import { Botao } from "../../coponents/components";
+import { Botao } from "../../components/components";
 
 export default function PageLogin(){
 

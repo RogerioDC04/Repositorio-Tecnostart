@@ -1,4 +1,4 @@
-import './externalCard.css'
+import './externalcard.css'
 
 export default function ExternalCard({ title, children, finalizadas, total }) {
     return (

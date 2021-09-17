@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { HOME, NOT_FOUND } from '../../routes/rotas'
+import { HOME, NOT_FOUND } from '../../router/rotas'
 
 
 export default function MenuNav() {
