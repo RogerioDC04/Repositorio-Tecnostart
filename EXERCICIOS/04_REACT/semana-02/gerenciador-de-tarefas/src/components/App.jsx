@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { MenuNav } from './components';
-import { PageEditar, PageHome, PageVisualizar, PageNaoEncontrada, PageLogin } from '../pages/pages'
-import { HOME, VISUALIZAR, EDITAR, NOT_FOUND, LOGIN } from '../router/rotas'
+import { PageEditar, PageHome, PageVisualizar, PageNaoEncontrada, PageLogin, PageCadastro } from '../pages/pages'
+import { HOME, VISUALIZAR, EDITAR, NOT_FOUND, LOGIN, CADASTRO } from '../router/rotas'
+
 
 export default function App() {
   const [tarefas, setTarefas] = useState(valorInicialTarefas)
@@ -59,6 +60,7 @@ function validarUsuarioLogado() {
       <MenuNav />
 
       <Switch>
+        <Route path={CADASTRO} exact component={PageCadastro}/>
         <Route path={LOGIN} exact component={PageLogin}/>
         <Route path={HOME} exact>
           {validarUsuarioLogado()}
