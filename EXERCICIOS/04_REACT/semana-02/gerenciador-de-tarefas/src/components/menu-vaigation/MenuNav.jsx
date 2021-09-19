@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { HOME, NOT_FOUND } from '../../router/rotas'
-
+import { CADASTRO, HOME, NOT_FOUND } from '../../router/rotas'
+import './menunav.css'
 
 export default function MenuNav() {
     return (
@@ -11,6 +11,7 @@ export default function MenuNav() {
                     sessionStorage.removeItem("usuario")
                     window.location.reload()
                 }}>Logout</button></li>
+                <li><Link to={CADASTRO}>Cadastrar</Link></li>
             </ul>
         </nav>
     )

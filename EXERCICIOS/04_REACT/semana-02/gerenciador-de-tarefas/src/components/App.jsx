@@ -38,21 +38,22 @@ export default function App() {
   }, [id])
 
 
-function validarUsuarioLogado() {
-  const usuario = sessionStorage.getItem("usuario")
-  if(!usuario){
-    return <PageLogin/>
-  }else{
-    return <PageHome
-            tarefas={tarefas}
-            setTarefas={setTarefas}
-            id={id}
-            setId={setId}
-            tarefasFinalizadas={tarefasFinalizadas}
-            totalTarefas={tarefas.length} />
+  function validarUsuarioLogado() {
+    const usuario = sessionStorage.getItem("usuario")
+    if (!usuario) {
+      return <PageLogin />
+    } else {
+      return <PageHome
+        tarefas={tarefas}
+        setTarefas={setTarefas}
+        id={id}
+        setId={setId}
+        tarefasFinalizadas={tarefasFinalizadas}
+        totalTarefas={tarefas.length} />
+    }
   }
 
-} 
+
 
   return (
     <Router>
@@ -60,8 +61,8 @@ function validarUsuarioLogado() {
       <MenuNav />
 
       <Switch>
-        <Route path={CADASTRO} exact component={PageCadastro}/>
-        <Route path={LOGIN} exact component={PageLogin}/>
+        <Route path={CADASTRO} exact component={PageCadastro} />
+        <Route path={LOGIN} exact component={PageLogin} />
         <Route path={HOME} exact>
           {validarUsuarioLogado()}
         </Route>
