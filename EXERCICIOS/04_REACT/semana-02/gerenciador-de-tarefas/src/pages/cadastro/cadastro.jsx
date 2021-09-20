@@ -13,7 +13,11 @@ export default function PageCadastro() {
                 Sugerir uma senha:
                 <input id='Senha' />
             </label>
-            <Botao>Cadastrar</Botao>
+           <Botao onclick ={()=>{
+              const user = document.querySelector('#Usuario').value
+              sessionStorage.setItem("usuario", user)
+              window.location.reload()    
+           }}>Cadastrar</Botao>
         </form>
     )
 }

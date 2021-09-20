@@ -1,15 +1,16 @@
 import "./login.css"
 
 import { Botao } from "../../components/components";
+import { useState } from "react";
 
 export default function PageLogin(){
-
+    
 
     return (
 
         <form>
             <label>
-                Nome do Usuário:
+                Nome:
                 <input id='Usuario'/>
             </label>
             <label>
