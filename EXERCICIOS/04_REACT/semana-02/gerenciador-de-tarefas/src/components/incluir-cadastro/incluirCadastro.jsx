@@ -1,14 +1,13 @@
-import "./incluirtarefa.css"
 import Botao from "../botao/Botao"
 import { useState } from "react";
 
-export default function IncluirTarefa(props) {
+export default function IncluirCadastro(props) {
     const [input, setInput] = useState('')
 
-    function handleOnClickAdicionar() {
+    function handleOnClickCadastro() {
 
         if (input.length > 0) {
-            props.adicionarTarefa(input)
+            props.adicionarCadastro(input)
             setInput('')
         }
     }
@@ -19,9 +18,9 @@ export default function IncluirTarefa(props) {
 
 
     return (
-        <div className="incluirTarefa">
+        <div className="incluirCadastro">
             <input type="text" onChange={handleOnChageInput} value={input} />
-            <Botao onclick={handleOnClickAdicionar}>Adicionar</Botao>
+            <Botao onclick={handleOnClickCadastro}>Cadastro</Botao>
         </div>
     )
     }

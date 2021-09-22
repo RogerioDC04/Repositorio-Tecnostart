@@ -4,6 +4,7 @@ import IncluirTarefa from "./incluir-tarefa/IncluirTarefa";
 import MenuNav from "./menu-vaigation/MenuNav";
 import Tarefa from "./tarefa/Tarefa";
 import TarefaEditar from "./tarefa-editar/TarefaEditar";
+import IncluirCadastro from "./incluir-cadastro/incluirCadastro";
 
 export {
     Botao,
@@ -11,5 +12,6 @@ export {
     IncluirTarefa,
     MenuNav,
     Tarefa,
-    TarefaEditar
+    TarefaEditar,
+    IncluirCadastro
 }
