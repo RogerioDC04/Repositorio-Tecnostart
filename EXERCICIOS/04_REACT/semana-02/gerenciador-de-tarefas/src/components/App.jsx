@@ -57,13 +57,8 @@ export default function App() {
     if (!usuario) {
       return <PageCadastro />
     } else {
-      return <PageHome
-        tarefas={tarefas}
-        setTarefas={setTarefas}
-        id={id}
-        setId={setId}
-        tarefasFinalizadas={tarefasFinalizadas}
-        totalTarefas={tarefas.length} />
+      return <PageLogin
+     />
     }
   }
 
@@ -78,7 +73,7 @@ export default function App() {
         <Route path={LOGIN} exact component={PageLogin} />
         <Route path={HOME} exact>
           {validarUsuarioLogado()}
-          {validarUsuarioCadastrado()}
+        
         </Route>
         <Route path={VISUALIZAR} exact>
           <PageVisualizar tarefas={tarefas} />
