@@ -1,47 +1,42 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
-
-
+import React from "react";
+import { 
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+import HomeScreen from './screens/home.screen';
+import CartoesVisitaScreen from './screens/cartoes-de-visita.screen';
+import CartaoVisitaDetalheScreen from './screens/cartao-de-visita-detalhe.creen';
 
 function App() {
-  const [cartoes, setCartoes] = useState([]);
-
-
-  useEffect(() => {
-    async function fetchCartoes() {
-      const { data } = await axios.get('https://jsonplaceholder.typicode.com/users')
-      setCartoes(data)
-    }
-
-    fetchCartoes()
-  }, [])
-
-
   return (
+    <Router>
 
-    <div className="App">
-      <header className="App-header">
-        <h1>CARTOES DE VISITA</h1>
-        <p>{situaçao}</p>
-      </header>
-
-      <main>
+      <nav>
         <ul>
-          {cartoes.map((cartao) => (
-            <li key={cartao.id}>
-              <h2>{cartao.name}</h2>
-              <p>{cartao.phone}</p>
-              <p>{cartao.email}</p>
-            </li>
-          ))}
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/cartoes-visita">Cartões Visita</Link>
+          </li>
         </ul>
-        <span>{cartoes.length === 0 && "semacartoes"}</span>
+      </nav>
 
-      </main>
-    </div>
-
+      <Switch>
+        <Route path="/home">
+          <HomeScreen />
+        </Route>
+        <Route path="/cartoes-visita">
+          <CartoesVisitaScreen />
+        </Route>
+        <Route path="/cartao-visita/:id">
+          <CartaoVisitaDetalheScreen />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
 
 export default App;
