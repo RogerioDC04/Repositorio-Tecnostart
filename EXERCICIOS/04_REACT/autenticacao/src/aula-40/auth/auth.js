@@ -1,11 +1,11 @@
 const TOKEN = 'token'
 
-const isLogged = () => !!localStorage.getItem(TOKEN)
+const isLogged = () => !!sessionStorage.getItem(TOKEN)
 const login = tokenValue => {
-    localStorage.setItem(TOKEN, tokenValue)
+    sessionStorage.setItem(TOKEN, tokenValue)
 }
 const logout = () => {
-    localStorage.removeItem(TOKEN)
+    sessionStorage.removeItem(TOKEN)
 }
 
 export {
